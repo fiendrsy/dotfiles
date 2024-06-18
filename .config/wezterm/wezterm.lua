@@ -3,15 +3,21 @@ local mux = wz.mux
 
 local conf = {}
 
+if wz.config_builder then
+  conf = wz.config_builder()
+end
+
 -- Open terminal in fullsreen mode
 wz.on('gui-startup', function()
-	local _, _, window = mux.spawn_window({})
-	window:gui_window():toggle_fullscreen()
+  local _, _, window = mux.spawn_window({})
+
+  window:gui_window():toggle_fullscreen()
 end)
 
 -- For MacOS enjoyers
 conf.native_macos_fullscreen_mode = true
 
+-- Set background to same color as neovim
 conf.colors = {}
 conf.colors.background = '#111111'
 
