@@ -7,10 +7,6 @@ startup_mode = 'Fullscreen'
 x = 0
 y = 0
 
-[cursor]
-style = "Underline"
-vi_mode_style = "Block"
-
 [font]
 size = 15.0
 
